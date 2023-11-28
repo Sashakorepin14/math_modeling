@@ -1,9 +1,9 @@
 import numpy as np
 
-def stepen():
-    a = float(input())
-    n = float(input())
+def stepen(a, n):
+    b = 1
     for i in np.arange(n):
-        a = a * a
-    return a
-print(stepen())
+        b *= a
+    return b
+print(stepen(5, 5))
+print(5**5)

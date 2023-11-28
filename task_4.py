@@ -1,11 +1,7 @@
 import numpy as np
 
 
-def function():
-    abcd = input()
-    a = float(input())
-    b = float(input())
-    N = int(input())
+def function(abcd, a, b, N):
     if abcd == 'y = x':
         x = np.linspace(a, b, N)
         y = x
@@ -17,4 +13,4 @@ def function():
         x = np.linspace(a, b, N)
         y = k/x
     return y
-print(function())
+print(function('y = x**2', -5, 5, 100))
