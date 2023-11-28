@@ -9,6 +9,3 @@ def sred_aref(a):
         v += a[i]
     return v/len(a)
 print(sred_aref(a))
-
-test_1 = np.arange(0, 100, 1)
-sred_aref(test_1)
