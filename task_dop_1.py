@@ -7,7 +7,8 @@ d = 3
 e = 2
 
 def hz(x):
-    return a * x**4 + b * x**3 + c * x**2 + d * x + e
+    func = a * x**4 + b * x**3 + c * x**2 + d * x + e
+    return func
 
 n = 10**5
 
