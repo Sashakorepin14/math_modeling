@@ -1,19 +1,20 @@
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
 
-def circle_plotter(r=15, a = 5, b = 2):
-
-    x = np.arange(-2*r, 2*r, 0.1)
-    y = np.arange(-2*r, 2*r, 0.1)
-
+def ellipse(N, a = 0.5, b = 0.2):
+    x = np.linspace(-1, 1, N)
+    y = np.linspace(-1, 1, N)
+    elips = (X**2)/(a**2) + (Y**2)/(b**2) - 1
+    
     X, Y = np.meshgrid(x, y)
-
-    fxy = (x**2 / a**2) + (y**2 / b**2) = 1
-
-    plt.contour(X, Y, fxy, levels=[0])
+    plt.contour(x, y, elips, levels=[0])
+    plt.xlabel('X')
+    plt.ylabel('Y')
+    plt.title('График эллипса')
     plt.axis('equal')
+    plt.grid(True)
     
     plt.savefig('fig_task_3.png')
     
 if __name__ == '__main__':
-	circle_plotter()
+    ellipse(100)
