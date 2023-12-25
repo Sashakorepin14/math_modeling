@@ -5,8 +5,7 @@ from matplotlib.animation import FuncAnimation
 	
 fig, ax = plt.subplots()
 
-anim_object, = plt.plot([], [], '-', lw=2)
-
+fig, ax = plt.subplots()
 xdata, ydata = [], []
 
 ax.set_xlim(0, 2*np.pi)
