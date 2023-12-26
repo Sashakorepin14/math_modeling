@@ -31,3 +31,5 @@ if __name__ == '__main__':
                         frames=100,
                         interval=30
                        )
+    	
+    ani.save('animation_4.gif') 
