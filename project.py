@@ -4,8 +4,8 @@ from matplotlib.animation import FuncAnimation
 
 
 fig = plt.figure()
-ax = plt.axes(xlim=(-10, 10), ylim=(-10, 10))
-circle, = ax.plot([], [], 'o')
+ax = plt.axes(xlim=(-100, 100), ylim=(-100, 100))
+circle, = ax.plot([], [], '-')
 plt.axis('equal')
  
 def init():
@@ -13,11 +13,12 @@ def init():
     return circle,
 
 def update(t):
-    alpha = 2.0  
-    phi = np.linspace(0, 2 * np.pi, 1000)  
-    radius = alpha * t  
-    x = radius * np.cos(phi)  
-    y = radius * np.sin(phi)  
+    alpha = 0.5 
+    phi = np.linspace(0, 2 * np.pi, 1000)
+    R = alpha * t  
+    x = R * np.cos(phi)
+    for i in np.arange(-50, 50, 0.1):
+        y = R * np.sin(phi) + i
     circle.set_data(x, y)
     return circle,
 
@@ -26,4 +27,4 @@ ani = FuncAnimation(fig,
                     frames=np.arange(0, 2*np.pi, 0.1),
                     interval=40
                     )
-ani.save('animation.3.gif')
+ani.save('project.gif')
