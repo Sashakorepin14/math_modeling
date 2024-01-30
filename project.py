@@ -9,7 +9,7 @@ def circle_move(time, R=0, x0=0, y0=0, vy0=0):
     x0 = x0
     y0 = y0 + vy0 * time
     alpha = np.arange(0, 3*np.pi, 0.1)
-    r = R * time ** 0.9
+    r = R * time ** 1.1
 
     x = x0 + r*np.cos(alpha)
     y = y0 + r*np.sin(alpha)
@@ -48,8 +48,8 @@ if __name__ == '__main__':
     
     ani = FuncAnimation(fig,
                         animate,
-                        frames=200,
+                        frames=100,
                         interval=30
                        )
     	
-    ani.save('animation_4.gif') 
+    ani.save('project.gif') 

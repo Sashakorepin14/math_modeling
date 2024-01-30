@@ -31,4 +31,4 @@ if __name__ == '__main__':
                         frames=100,
                         interval=30
                        )
-    ani.save('animation_3.gif') 
+    ani.save('animation_7.gif') 
