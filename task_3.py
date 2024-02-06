@@ -53,16 +53,16 @@ def animate(t):
 if __name__ == '__main__':
 
     fig, ax = plt.subplots()
-    serdce, = plt.plot([], [], '-', color='b', label='Ball')
+    serdce, = plt.plot([], [], '-', color='r', label='Ball')
 
-    edge = 25
+    edge = 50
     plt.axis('equal')
     ax.set_xlim(-edge, edge)
     ax.set_ylim(-edge, edge)
 
     ani = FuncAnimation(fig,
                         animate,
-                        frames=np.arange(0, 2*np.pi, 0.1),
+                        frames=np.arange(0, 2*np.pi, 0.01),
                         interval=30)
 
     ani.save('task3.1Lab7.gif')
