@@ -62,7 +62,7 @@ if __name__ == '__main__':
 
     ani = FuncAnimation(fig,
                         animate,
-                        frames=np.arange(0, 2*np.pi, 0.01),
+                        frames=np.arange(0, 2*np.pi, 0.05),
                         interval=30)
 
     ani.save('task3.1Lab7.gif')
